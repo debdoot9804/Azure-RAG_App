@@ -4,9 +4,7 @@ from azure.core.credentials import AzureKeyCredential
 from azure.storage.blob import BlobServiceClient
 from openai import AzureOpenAI
 from PyPDF2 import PdfReader
-import uuid
-import tiktoken
-import re
+
 from dotenv import load_dotenv
 
 

@@ -4,3 +4,4 @@ azure-storage-blob==12.17.0
 openai==1.10.0
 PyPDF2==3.0.1
 tiktoken
+python-dotenv
