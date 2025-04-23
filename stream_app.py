@@ -1,9 +1,20 @@
 import streamlit as st
-from rag_app import query_rag
+from rag_app import query_rag,clear_index
 from data_ingest import upload_and_index_document
 
 def main():
     st.title("RAG Application with Azure and Streamlit")
+
+
+    # Clear index
+    st.header("Manage Index")
+    if st.button("Clear Index"):
+        with st.spinner("Clearing index..."):
+            count, message = clear_index()
+            if count >= 0:
+                st.success(f"{message} ({count} documents deleted)")
+            else:
+                st.error(message)
     
     # Document upload
     st.header("Upload Document")

@@ -29,8 +29,19 @@ openai_client = AzureOpenAI(
     api_version="2024-02-15-preview"
 )
 
-
-
+def clear_index():
+    """Clear all documents from the Azure AI Search index."""
+    try:
+        documents = search_client.search(search_text="*", select=["id"])
+        ids = [{"id": doc["id"]} for doc in documents]
+        if ids:
+            search_client.delete_documents(ids)
+            print(f"Deleted {len(ids)} documents from index")
+            return len(ids), "Index cleared successfully"
+        return 0, "Index was already empty"
+    except Exception as e:
+        return 0, f"Error clearing index: {str(e)}"
+    
 
 
 def query_rag(question):
