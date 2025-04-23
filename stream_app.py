@@ -1,5 +1,6 @@
 import streamlit as st
-from rag_app import upload_and_index_document, query_rag
+from rag_app import query_rag
+from data_ingest import upload_and_index_document
 
 def main():
     st.title("RAG Application with Azure and Streamlit")
