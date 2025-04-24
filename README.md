@@ -30,6 +30,7 @@ cd Azure-RAG_App
 
 The Streamlit front-end can be accessed here : https://azure-ragapp-debdoot.streamlit.app/
 
-![image](https://github.com/user-attachments/assets/c1a6120f-6fd6-44b8-83c3-52f9febacd98)
+![image](https://github.com/user-attachments/assets/a7f853eb-2f76-457c-b57b-ab69792fbf94)
+
 
 
